@@ -1,0 +1,77 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Santa
+{% endblock %}
+
+{% block content %}
+
+ <h1 class="mt-5">
+     {{ article.title }}
+    </h1>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Модели в Django</title>
+</head>
+
+</html>
+    {% for Heroe in Heroes %}
+                      <img width="550" height="550"  align="left" src="../../media/{{ Heroe.photo }}" />
+                   <td></td><h2>{{ Heroe.name }}</h2> <br> <br>
+                          <h3>Показатели</h3>
+                           <p>Атрибуты :</p>
+                        <p> <img width="32" height="32"  align="left" src="../../media/Strength_attribute_symbol.png" />  <font color="red" >Сила: {{ Heroe.strength }} + {{ Heroe.strengthplus }} за уровень </font></p>
+                        <p> <img width="32" height="32"  align="left" src="../../media/Agility_attribute_symbol.png" /><font color="green" >Ловкость: {{ Heroe.agility }} + {{ Heroe.agilityplus }} за уровень </font></p>
+                         <p> <img width="32" height="32"  align="left" src="../../media/Intelligence_attribute_symbol.png" /> <font color="blue" > Интеллект:{{ Heroe.intellect }} + {{ Heroe.intellectplus }} за уровень </font></p>
+                  {% if request.user.is_authenticated %}
+              {% for Conterpicker in Conters %}
+                 <p>  Герои против которых  {{ Heroe.name }} хорошо стоит линию:</p>
+                 <p> <img width="32" height="32"  align="left" src="../../media/{{ Conterpicker.good1 }}" />
+
+                  <img width="32" height="32"  align="left" src="../../media/{{ Conterpicker.good2 }}" />
+
+                  <img width="32" height="32"  align="left" src="../../media/{{ Conterpicker.good3 }}" />
+                      </p>
+                      <p> <br> </p>
+                    <p>  Герои против которых  {{ Heroe.name }} плохо стоит линию:</p>
+                  <img width="32" height="32"  align="left" src="../../media/{{ Conterpicker.bad1 }}" />
+
+                  <img width="32" height="32"  align="left" src="../../media/{{ Conterpicker.bad2 }}" />
+
+                  <img width="32" height="32"  align="left" src="../../media/{{ Conterpicker.bad3 }}" />
+               {% endfor %}
+      <br> <br> <br> <br> <br> <br>
+                 <body class="container">
+                        <form method="POST" action="create/">
+                         {% csrf_token %}
+                          <p>
+                             <label> Введите текст вашей сборки на данного героя:</label><br>
+                             <input type="text" name="text" size="100"/>
+                         </p>
+                           <p>
+                           {% for Heroe in Heroes %}
+                                <input   type="hidden" name="heroe" value="{{ Heroe.name }}">
+                            {% endfor %}
+                           <p>
+                           {% for User in Users %}
+                              <input type="hidden" name="user" value="{{user.username}}">
+                              {% endfor %}
+                              <input type="submit" value="Сохранить" >
+
+                          </form>
+                            </body>
+
+
+
+         {% for Sborki in Sborkis %}
+        <br>
+        <p> <font color="red" > Имя пользователя: {{ Sborki.user }} </font> </p>
+         <p><font color="blue" >Текст сборки:</font> <br> {{ Sborki.text }} </p>
+            {% endfor %}
+
+                 {% else %}
+                  <p> Чтобы просмотреть Контрпик и Сборки, нужно пройти <a class="nav-link" href="/reg">Регистрацию</a> или произвести <a class="nav-link" href="/log"> Вход </a> </p>
+                  {% endif %}
+     {% endfor %}
+ {% endblock %}

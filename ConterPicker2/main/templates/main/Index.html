@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная Страничка</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/css/style.css" type="text/css">
+    <link rel="stylesheet" href="% static 'main'" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">Русский Контрпикер</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/damn"> О нас <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+              {% if request.user.is_authenticated %}
+				<li class="last"> {{user.username}} | <a href="{% url 'logout' %}">Выйти</a></li>
+				{% else %}
+                <a class="nav-link" href="/reg"> Регистрация</a> | <a class="nav-link" href="/log"> Вход </a>
+               {% endif %}
+
+    </div>
+  </nav>
+
+
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" onClick="window.location.href='/Abaddon'" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_abaddon.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_alchemist.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" onClick="window.location.href='/Axe'">
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_axe.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_beastmaster.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_brewmaster.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_bristleback.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_centaur.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_chaos_knight.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_rattletrap.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_dawnbreaker.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_doom_bringer.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_dragon_knight.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_earth_spirit.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_earthshaker.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_elder_titan.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_huskar.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_wisp.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_kunkka.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_legion_commander.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_life_stealer.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_lycan.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_magnataur.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_marci.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_mars.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_night_stalker.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_omniknight.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_phoenix.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" onClick="window.location.href='/Pudge'">
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_pudge.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_sand_king.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_slardar.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_snapfire.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_spirit_breaker.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_sven.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_tidehunter.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_shredder.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_tiny.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_treant.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_tusk.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_abyssal_underlord.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_undying.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_skeleton_king.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_antimage.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_arc_warden.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_bloodseeker.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_bounty_hunter.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_broodmother.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_clinkz.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_drow_ranger.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_ember_spirit.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_faceless_void.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_gyrocopter.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_hoodwink.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_juggernaut.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_lone_druid.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_luna.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_medusa.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_meepo.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_mirana.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_monkey_king.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" onClick="window.location.href='/Morphling'">
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_morphling.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_naga_siren.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_nyx_assassin.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_pangolier.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_phantom_assassin.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_phantom_lancer.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_razor.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_riki.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_nevermore.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_slark.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_sniper.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_spectre.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_templar_assassin.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_terrorblade.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_troll_warlord.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_ursa.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_vengefulspirit.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_venomancer.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_viper.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_weaver.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_ancient_apparition.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_bane.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_batrider.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_chen.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_crystal_maiden.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_dark_seer.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_sylph.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_dazzle.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_death_prophet.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_disruptor.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_enchantress.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_enigma.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_grimstroke.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_invoker.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_jakiro.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_keeper_of_the_light.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_leshrac.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_lich.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_lina.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_lion.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_furion.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_necrolyte.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_ogre_magi.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_oracle.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_obsidian_destroyer.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_puck.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_pugna.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_queenofpain.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_rubick.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_shadow_demon.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_shadow_shaman.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_silencer.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_skywrath_mage.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_storm_spirit.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_techies.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_tinker.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_visage.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_void_spirit.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_warlock.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_windrunner.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_winter_wyvern.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true" onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_witch_doctor.webm' %}" type="video/webm"></video>
+</button>
+<button class="btn btn-outline-success my-2 my-sm-0 pic" type="submit" >
+<video width="120" height="120" preload="auto" loop="true"  onmouseover="this.play()" onmouseout="this.pause()"
+       src="{% static 'heroes/npc_dota_hero_zuus.webm' %}" type="video/webm"></video>
+</button>
+
+</body>
+</html>
